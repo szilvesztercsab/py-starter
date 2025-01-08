@@ -1,0 +1,8 @@
+[project]
+description = "Add your description here"
+name = "hello_world"
+requires-python = ">=3.13"
+version = "0.1.0"
+
+[project.scripts]
+hello = "hello:main"

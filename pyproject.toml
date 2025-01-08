@@ -1,0 +1,73 @@
+[project]
+dependencies = [
+  "hello_world",
+]
+description = "Add your description here"
+name = "py-starter"
+readme = "README.md"
+requires-python = ">=3.13"
+version = "0.1.0"
+
+[tool.uv.sources]
+hello_world = {path = "hello_world", editable = true}
+
+[dependency-groups]
+dev = [
+  "poethepoet>=0.32.0",
+  "pre-commit>=4.0.1",
+  "pytest>=8.3.4",
+  "pytest-cov>=6.0.0",
+  "pytest-mock>=3.14.0",
+  "ruff>=0.8.6",
+]
+
+[tool.poe.tasks]
+_c = "rm -rf .venv .pytest_cache .ruff_cache **/*.egg-info dist"
+_i = "uv run pre-commit install"
+b = "uv build"
+c = [
+  {ref = "_c"},
+  {cmd = "uv clean"},
+]
+i = [
+  {ref = "_i"},
+  {cmd = "uv sync --all-groups --all-packages --all-extras --frozen"},
+]
+l = "uv run ruff check"
+t = "uv run pytest --cov --pdb"
+u = "uv sync --upgrade"
+
+[tool.ruff]
+fix = true
+preview = true
+required-version = ">=0.8.6"
+show-fixes = true
+
+[tool.ruff.lint]
+fixable = ["ALL"]
+ignore = [
+  "D203", # incorrect-blank-line-before-class
+  "D213", # multi-line-summary-second-line
+  "CPY001", # missing-copyright-notice
+]
+select = ["ALL"]
+
+[tool.ruff.lint.per-file-ignores]
+"**/*_test.py" = ["ALL"]
+
+[tool.ruff.lint.mccabe]
+max-complexity = 4
+
+[tool.ruff.format]
+docstring-code-format = true
+
+[tool.pytest]
+capture = "yes"
+
+[tool.coverage.run]
+branch = true
+omit = ["**/*_test.py"]
+
+[tool.coverage.report]
+fail_under = 100
+show_missing = true

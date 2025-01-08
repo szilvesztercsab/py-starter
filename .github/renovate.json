@@ -1,0 +1,15 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "automerge": true,
+  "extends": [
+    "config:best-practices"
+  ],
+  "lockFileMaintenance": {
+    "enabled": true
+  },
+  "osvVulnerabilityAlerts": true,
+  "pre-commit": {
+    "enabled": true
+  },
+  "semanticCommits": "enabled"
+}

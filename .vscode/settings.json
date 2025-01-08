@@ -1,0 +1,10 @@
+{
+  "python.experiments.optInto": [
+    "pythonTestAdapter"
+  ],
+  "python.testing.pytestArgs": [
+    "--pdb"
+  ],
+  "python.testing.pytestEnabled": true,
+  "python.testing.unittestEnabled": false
+}

@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "ms-python.python",
+    "ms-python.debugpy",
+    "charliermarsh.ruff",
+    "be5invis.toml",
+    "ms-python.vscode-pylance",
+    "esbenp.prettier-vscode",
+    "njpwerner.autodocstring",
+    "aaron-bond.better-comments",
+    "github.vscode-github-actions"
+  ]
+}
