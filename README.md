@@ -37,6 +37,13 @@ foo@bar:~$ uv run hello
 ```
 <!-- markdownlint-enable line-length -->
 
+Run the linters and tests via:
+
+```sh
+uv run poe l  # runs ruff
+uv run poe t  # runs pytest
+```
+
 <!-- TODO: add more documentation on usage, customization, etc. -->
 <!-- TODO: add documentation generation -->
 <!-- TODO: add templating support -->
