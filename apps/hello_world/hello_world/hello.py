@@ -1,9 +1,4 @@
-# /// script
-# requires-python = ">=3.13"
-# dependencies = []
-# ///
-
-"""Module docstring."""
+"""The hello world cli app."""
 
 import logging
 from sys import stdout
@@ -15,7 +10,7 @@ def main():  # noqa: ANN201 (missing-return-type-undocumented-public-function)
     logging.basicConfig(
         stream=stdout,
         level=logging.INFO,
-        format="%(asctime)s %(levelname)-8s [[%(pathname)s:%(lineno)d]] %(message)s",
+        format="%(asctime)s %(levelname)s [%(pathname)s:%(lineno)d] %(message)s",
     )
     logger.info("Hello, world!")
     logger.warning("Bye, world!")

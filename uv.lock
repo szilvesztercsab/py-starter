@@ -1,6 +1,12 @@
 version = 1
 requires-python = ">=3.13"
 
+[manifest]
+members = [
+    "hello-world",
+    "py-starter",
+]
+
 [[package]]
 name = "cfgv"
 version = "3.4.0"
@@ -68,7 +74,7 @@ wheels = [
 [[package]]
 name = "hello-world"
 version = "0.1.0"
-source = { editable = "hello_world" }
+source = { editable = "apps/hello_world" }
 
 [[package]]
 name = "identify"
@@ -166,9 +172,6 @@ wheels = [
 name = "py-starter"
 version = "0.1.0"
 source = { virtual = "." }
-dependencies = [
-    { name = "hello-world" },
-]
 
 [package.dev-dependencies]
 dev = [
@@ -181,7 +184,6 @@ dev = [
 ]
 
 [package.metadata]
-requires-dist = [{ name = "hello-world", editable = "hello_world" }]
 
 [package.metadata.requires-dev]
 dev = [

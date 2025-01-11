@@ -1,5 +1,5 @@
 import logging
-import hello
+from hello_world import hello
 
 
 def test_main_logs_info(caplog):
@@ -15,10 +15,10 @@ def test_main_logs_warn(caplog):
 
 
 def test_main_configures_logging(mocker):
-    mocker.patch("hello.logging.basicConfig")
+    mocker.patch("hello_world.hello.logging.basicConfig")
     hello.main()
     hello.logging.basicConfig.assert_called_once_with(
         stream=hello.stdout,
         level=hello.logging.INFO,
-        format="%(asctime)s %(levelname)-8s [[%(pathname)s:%(lineno)d]] %(message)s",
+        format="%(asctime)s %(levelname)s [%(pathname)s:%(lineno)d] %(message)s",
     )
