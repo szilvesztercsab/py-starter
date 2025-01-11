@@ -32,8 +32,8 @@ Then you can run the provided hello_world script via:
 <!-- markdownlint-disable line-length -->
 ```console
 foo@bar:~$ uv run hello
-2025-01-10 17:43:20,049 INFO     [[/Users/csaba/Code/py-starter/hello_world/src/hello.py:20]] Hello, world!
-2025-01-10 17:43:20,050 WARNING  [[/Users/csaba/Code/py-starter/hello_world/src/hello.py:21]] Bye, world!
+2025-01-11 16:49:26,284 INFO [/Users/csaba/Code/py-starter/apps/hello_world/hello_world/hello.py:15] Hello, world!
+2025-01-11 16:49:26,284 WARNING [/Users/csaba/Code/py-starter/apps/hello_world/hello_world/hello.py:16] Bye, world!
 ```
 <!-- markdownlint-enable line-length -->
 
