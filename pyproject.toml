@@ -52,7 +52,7 @@ ignore = [
 select = ["ALL"]
 
 [tool.ruff.lint.per-file-ignores]
-"**/*_test.py" = ["ALL"]
+"**/tests/*" = ["ALL"]
 
 [tool.ruff.lint.mccabe]
 max-complexity = 4
@@ -65,7 +65,8 @@ capture = "yes"
 
 [tool.coverage.run]
 branch = true
-omit = ["**/*_test.py"]
+omit = ["**/tests/*"]
+source = ["apps/hello_world"]
 
 [tool.coverage.report]
 fail_under = 100
