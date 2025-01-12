@@ -1,0 +1,12 @@
+{
+  "configurations": [
+    {
+      "cwd": "${workspaceFolder}/apps/hello_world",
+      "module": "hello_world.hello",
+      "name": "Python Debugger: Hello World",
+      "request": "launch",
+      "type": "debugpy"
+    }
+  ],
+  "version": "0.2.0"
+}

@@ -14,8 +14,9 @@ An opinionated python starter project with:
 - [pyest](https://pytest.org)
 - [pre-commit](https://pre-commit.com)
 - [ruff](https://docs.astral.sh/ruff)
-- Visual Studio Code [workspace settings](https://code.visualstudio.com/docs/getstarted/settings#_workspace-settings)
-  and [recommended extensions](https://code.visualstudio.com/docs/editor/extension-marketplace#_workspace-recommended-extensions)
+- Visual Studio Code [workspace settings](https://code.visualstudio.com/docs/getstarted/settings#_workspace-settings),
+  [recommended extensions](https://code.visualstudio.com/docs/editor/extension-marketplace#_workspace-recommended-extensions)
+  and [launch configuration](https://code.visualstudio.com/docs/editor/debugging#_launchjson-attributes)
 - [GitHub Actions Workflow](https://docs.github.com/en/actions)
   for linting and testing
 
