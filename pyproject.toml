@@ -33,7 +33,7 @@ i = [
   {cmd = "uv sync --all-groups --all-packages --all-extras --frozen"},
 ]
 l = "uv run ruff check"
-t = "uv run pytest --cov --pdb"
+t = "uv run pytest --cov --doctest-modules --pdb"
 u = "uv sync --upgrade"
 
 [tool.ruff]

@@ -8,6 +8,7 @@
     "esbenp.prettier-vscode",
     "njpwerner.autodocstring",
     "aaron-bond.better-comments",
-    "github.vscode-github-actions"
+    "github.vscode-github-actions",
+    "noahsyn10.pydoctestbtn"
   ]
 }

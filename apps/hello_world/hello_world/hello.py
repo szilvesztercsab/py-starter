@@ -4,8 +4,13 @@ import logging
 from sys import stdout
 
 
-def main():  # noqa: ANN201 (missing-return-type-undocumented-public-function)
-    """Run the main script."""
+def main() -> None:
+    """Run the main script.
+
+    Examples:
+    >>> main()
+
+    """
     logger = logging.getLogger(__name__)
     logging.basicConfig(
         stream=stdout,
