@@ -12,17 +12,18 @@ members = [
 
 [dependency-groups]
 dev = [
-  "poethepoet>=0.32.0",
-  "pre-commit>=4.0.1",
-  "pytest>=8.3.4",
-  "pytest-cov>=6.0.0",
-  "pytest-mock>=3.14.0",
-  "ruff>=0.8.6",
+  "poethepoet",
+  "pre-commit",
+  "pytest",
+  "pytest-cov",
+  "pytest-mock",
+  "ruff",
 ]
 
 [tool.poe.tasks]
 _c = "rm -rf .venv .pytest_cache .ruff_cache **/*.egg-info dist"
 _i = "uv run pre-commit install"
+"api:dev" = "uv run --directory=apps/api --package=api fastapi dev api/main.py --port 8001"
 b = "uv build"
 c = [
   {ref = "_c"},
@@ -35,6 +36,8 @@ i = [
 l = "uv run ruff check"
 t = "uv run pytest --cov --pdb"
 u = "uv sync --upgrade"
+"ui:dev" = "uv run --directory=apps/ui --package=ui python ui/manage.py runserver 8000"
+"ui:migrate" = "uv run --directory=apps/ui --package=ui python ui/manage.py migrate"
 
 [tool.ruff]
 fix = true
@@ -52,7 +55,7 @@ ignore = [
 select = ["ALL"]
 
 [tool.ruff.lint.per-file-ignores]
-"**/*_test.py" = ["ALL"]
+"**/tests/**/*" = ["ALL"]
 
 [tool.ruff.lint.mccabe]
 max-complexity = 4
@@ -62,10 +65,15 @@ docstring-code-format = true
 
 [tool.pytest]
 capture = "yes"
+django_debug_mode = true
 
 [tool.coverage.run]
 branch = true
-omit = ["**/*_test.py"]
+omit = [
+  "**/tests/**/*",
+  "apps/ui/**/*", # TODO: test the ui too
+]
+source = ["apps/api", "apps/ui"]
 
 [tool.coverage.report]
 fail_under = 100

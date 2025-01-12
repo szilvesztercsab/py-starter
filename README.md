@@ -27,15 +27,12 @@ Requirements:
 - [install `uv`](https://docs.astral.sh/uv/getting-started/installation/)
 - `uv run poe i` to install the project, commit hooks and all requirements
 
-Then you can run the provided hello_world script via:
+Then you can run the provided sample FastApi and Django apps via:
 
-<!-- markdownlint-disable line-length -->
-```console
-foo@bar:~$ uv run hello
-2025-01-11 16:49:26,284 INFO [/Users/csaba/Code/py-starter/apps/hello_world/hello_world/hello.py:15] Hello, world!
-2025-01-11 16:49:26,284 WARNING [/Users/csaba/Code/py-starter/apps/hello_world/hello_world/hello.py:16] Bye, world!
+```sh
+uv run poe api:dev  # run the fastapi app
+uv run poe ui:dev   # run the django app
 ```
-<!-- markdownlint-enable line-length -->
 
 Run the linters and tests via:
 
@@ -44,8 +41,9 @@ uv run poe l  # runs ruff
 uv run poe t  # runs pytest
 ```
 
-<!-- TODO: add more documentation on usage, customization, etc. -->
-<!-- TODO: add documentation generation -->
-<!-- TODO: add templating support -->
-<!-- TODO: add dockerfile -->
+<!-- TODO: add more documentation on usage, customization, etc. to this readme -->
+<!-- TODO: add more readme-s -->
+<!-- TODO: add documentation generation to repo -->
+<!-- TODO: add templating support to repo -->
+<!-- TODO: add dockerfile to repo -->
 <!-- TODO: add ... -->
