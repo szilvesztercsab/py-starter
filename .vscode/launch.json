@@ -1,0 +1,42 @@
+{
+  "configurations": [
+    {
+      "args": [
+        "runserver",
+        "8000"
+      ],
+      "autoStartBrowser": false,
+      "cwd": "${workspaceFolder}/apps/ui",
+      "django": true,
+      "name": "Python Debugger: Django",
+      "program": "ui/manage.py",
+      "request": "launch",
+      "serverReadyAction": {
+        "action": "openExternally",
+        "pattern": "Starting development server at http://127.0.0.1:(\\d+)",
+        "uriFormat": "http://127.0.0.1:%s/admin"
+      },
+      "type": "debugpy"
+    },
+    {
+      "args": [
+        "api.main:app",
+        "--reload",
+        "--port",
+        "8001"
+      ],
+      "cwd": "${workspaceFolder}/apps/api",
+      "jinja": true,
+      "module": "uvicorn",
+      "name": "Python Debugger: FastAPI",
+      "request": "launch",
+      "serverReadyAction": {
+        "action": "openExternally",
+        "pattern": "Uvicorn running on http://127.0.0.1:(\\d+)",
+        "uriFormat": "http://127.0.0.1:%s/docs"
+      },
+      "type": "debugpy"
+    }
+  ],
+  "version": "0.2.0"
+}

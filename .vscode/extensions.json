@@ -8,6 +8,10 @@
     "esbenp.prettier-vscode",
     "njpwerner.autodocstring",
     "aaron-bond.better-comments",
-    "github.vscode-github-actions"
+    "github.vscode-github-actions",
+    "ecmel.vscode-html-css",
+    "batisteo.vscode-django",
+    "samuelcolvin.jinjahtml",
+    "damildrizzy.fastapi-snippets"
   ]
 }

@@ -10,3 +10,6 @@ wheels/
 
 # log files
 **/*.log
+
+# sqlite database
+**/*.sqlite3
