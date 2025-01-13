@@ -11,7 +11,7 @@ def main() -> None:
     >>> main()
 
     """
-    logger = logging.getLogger(__name__)
+    logger: logging.Logger = logging.getLogger(__name__)
     logging.basicConfig(
         stream=stdout,
         level=logging.INFO,
